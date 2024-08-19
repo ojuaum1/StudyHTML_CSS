@@ -90,9 +90,9 @@ header nav a {
 .search-bar input[type="text"],
 .search-bar input[type="date"],
 .search-bar button {
-    width: 80%; /* 80% da largura da caixa de busca */
-    max-width: 100%; /* Ajusta a largura máxima para garantir que não ultrapasse a caixa */
-    margin-bottom: 10px; /* Espaço entre os campos */
+    width: 80%;
+    max-width: 100%;
+    margin-bottom: 10px;
 }
 
 .search-bar input[type="text"],
@@ -184,7 +184,6 @@ footer a {
     text-decoration: none;
 }
 
-/* Media Queries */
 @media (max-width: 1024px) {
     .header-container {
         padding: 0 10px;
