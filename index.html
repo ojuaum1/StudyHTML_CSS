@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JoaoGostoso.com</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
@@ -14,17 +13,16 @@
         <div class="header-container">
             <h1>JoaoGostoso.com</h1>
             <nav id="main-nav">
-                <a href="">Hotéis</a>
-                <a href="">Contato</a>
-                <a href="">Entrar</a>
-                <a href="" class="btn-cadastrar">Cadastrar-se</a>
+                <a href="#">Hotéis</a>
+                <a href="#">Contato</a>
+                <a href="#">Entrar</a>
+                <a href="#" class="btn-cadastrar">Cadastrar-se</a>
             </nav>
             <div class="menu-toggle" id="menu-toggle">
-                <img src="./Assets/icons/menu-icon.svg" alt="Menu">
+                <img src="./Assets/icons/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu">
             </div>
         </div>
     </header>
-    
 
     <section class="hero">
         <div class="hero-container">
@@ -34,7 +32,7 @@
                     seus sonhos.</p>
             </div>
             <div class="hero-image">
-                <img src="./Assets/mapa-brasil.png" alt="mapa do brasil">
+                <img src="./Assets/mapa-brasil.png" alt="Mapa do Brasil">
             </div>
         </div>
         <div class="search-bar">
@@ -50,12 +48,9 @@
                 <img src="./Assets/icons/checkout-icon.svg" alt="Check-out Icon">
                 <input type="date">
             </div>
-            <button>
-                Procurar hotel
-            </button>
+            <button>Procurar hotel</button>
         </div>
     </section>
-
 
     <section class="offers">
         <div class="card">
@@ -66,7 +61,7 @@
         <div class="card">
             <img src="./Assets/arraial.jpg" alt="Arraial do Cabo">
             <h3>Arraial do Cabo</h3>
-            <p>Conosca as atrações em Arraial do Cabo e as praias mais lindas do país.</p>
+            <p>Conheça as atrações em Arraial do Cabo e as praias mais lindas do país.</p>
         </div>
         <div class="card">
             <img src="./Assets/trezeilhas.jpg" alt="Treze Tílias">
@@ -78,6 +73,8 @@
             <h3>Ipanema</h3>
             <p>Experimente o melhor da cultura carioca em uma das praias mais famosas do mundo.</p>
         </div>
+    </section>
+    <section class="offers">
         <div class="card">
             <img src="./Assets/angra.jpg" alt="Angra dos Reis">
             <h3>Angra dos Reis</h3>
@@ -86,7 +83,7 @@
         <div class="card">
             <img src="./Assets/arraial.jpg" alt="Arraial do Cabo">
             <h3>Arraial do Cabo</h3>
-            <p>Conosca as atrações em Arraial do Cabo e as praias mais lindas do país.</p>
+            <p>Conheça as atrações em Arraial do Cabo e as praias mais lindas do país.</p>
         </div>
         <div class="card">
             <img src="./Assets/trezeilhas.jpg" alt="Treze Tílias">
@@ -102,39 +99,56 @@
 
     <section class="promo">
         <div>
-            <h2>Venha conferir os melhores <span style="color:#002777;">hoteis</span> <br> com as melhores <span
+            <h2>Venha conferir os melhores <span style="color:#002777;">hotéis</span> com as melhores <span
                     style="color:green;">promoções</span> do país.</h2>
-            <p><span style="color:green;">Não perca tempo</span> e venha conferir o que há de <br> <span
+            <p><span style="color:green;">Não perca tempo</span> e venha conferir o que há de <span
                     style="color: #FFDF00;">melhor</span> na hotelagem brasileira.</p>
-
         </div>
-
-        <img src="./Assets/travel.png" alt="">
+        <img src="./Assets/travel.png" alt="Promoção">
     </section>
 
-    <footer>
+    <section class="verde">
         <h2>Fale com um de nossos assessores</h2>
-        <p>Email: <a href="joao.gostoso.com.muito">Joaogostoso.com.br</a></p>
-        <p>Telefone: <a href="tel:+55114002-8922">4002-8922</a></p>
-        <div style="background-color: #FFDF00; height: 30px; width:'100%';">
-            <p>&copy; 2024 Hospedagens.com</p>
-        </div>
-        
-        
-        
-        
+        <p>Email: <a href="mailto:joaogostoso@com.br">joaogostoso@com.br</a></p>
+        <p>Telefone: <a href="tel:+551140028922">4002-8922</a></p>
+    </section>
+    
+    
+
+
+
+    <footer>
+
+        <p style="text-align: center; margin: 0;">&copy; 2024 Hospedagens.com</p>
+
     </footer>
-</body>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var menuToggle = document.getElementById('menu-toggle');
-        var nav = document.getElementById('main-nav');
-    
-        menuToggle.addEventListener('click', function() {
-            nav.classList.toggle('active');
-            menuToggle.classList.toggle('active');
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuToggle = document.getElementById('menu-toggle');
+            var nav = document.getElementById('main-nav');
+
+            menuToggle.addEventListener('click', function () {
+                nav.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+
+            var cards = document.querySelectorAll('.card');
+
+            cards.forEach(function (card) {
+                card.addEventListener('mouseover', function () {
+                    card.style.transform = 'translateY(-10px)';
+                    card.style.transition = 'transform 0.2s ease';
+                });
+
+                card.addEventListener('mouseout', function () {
+                    card.style.transform = 'translateY(0)';
+                });
+            });
         });
-    });
     </script>
-    
+</body>
+
 </html>

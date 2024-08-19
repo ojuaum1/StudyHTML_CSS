@@ -6,8 +6,8 @@ body {
 }
 
 header {
-    background: rgb(9,9,121);
-    background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,39,119,1) 100%, rgba(30,82,180,1) 100%);
+    background: rgb(9, 9, 121);
+    background: linear-gradient(90deg, rgba(9, 9, 121, 1) 0%, rgba(0, 39, 119, 1) 100%, rgba(30, 82, 180, 1) 100%);
     color: #fff;
     padding: 20px 0;
 }
@@ -36,8 +36,8 @@ header nav a {
 }
 
 .hero {
-    background: rgb(9,9,121);
-    background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,39,119,1) 100%, rgba(30,82,180,1) 100%);
+    background: rgb(9, 9, 121);
+    background: linear-gradient(90deg, rgba(9, 9, 121, 1) 0%, rgba(0, 39, 119, 1) 100%, rgba(30, 82, 180, 1) 100%);
     color: #fff;
     padding: 50px 0;
     display: flex;
@@ -47,12 +47,13 @@ header nav a {
 }
 
 .hero-container {
+    margin-top: -20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 .hero-text {
@@ -70,7 +71,7 @@ header nav a {
 }
 
 .hero-image img {
-    max-width: 400px; 
+    max-width: 400px;
     height: auto;
 }
 
@@ -86,52 +87,39 @@ header nav a {
     position: absolute;
 }
 
-.input-group {
-    position: relative;
-    display: flex;
-    align-items: center;
+.search-bar input[type="text"],
+.search-bar input[type="date"],
+.search-bar button {
+    width: 80%; /* 80% da largura da caixa de busca */
+    max-width: 100%; /* Ajusta a largura máxima para garantir que não ultrapasse a caixa */
+    margin-bottom: 10px; /* Espaço entre os campos */
 }
 
-.input-group img {
-    position: absolute;
-    left: 10px;
-    width: 20px;
-    height: 20px;
-}
-
-.input-group input[type="text"],
-.input-group input[type="date"] {
-    padding: 10px 10px 10px 40px; 
+.search-bar input[type="text"],
+.search-bar input[type="date"] {
+    padding: 8px 10px;
+    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
-    width: 250px;
+    box-sizing: border-box;
 }
 
-button {
-    background-color: #28a745;
-    color: #fff;
+.search-bar button {
+    padding: 10px;
+    font-size: 14px;
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+    background-color: #007bff;
+    color: #fff;
     border-radius: 5px;
+    cursor: pointer;
 }
-
-
-button img {
-    margin-right: 5px;
-    width: 20px;
-    height: 20px;
-}
-
 
 .offers {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    padding: 100px;
+    padding: 20px;
+    margin-top: 100px;
 }
 
 .card {
@@ -140,6 +128,7 @@ button img {
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.2s ease-in-out;
 }
 
 .card img {
@@ -159,12 +148,8 @@ button img {
 
 .promo {
     background-color: #f8f9fa;
-    text-align: left
-    ;
-    padding: 50px;
-    display: flex;
-    justify-content: space-between;
-    
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .promo h2 {
@@ -175,9 +160,16 @@ button img {
     color: #28a745;
     font-size: 24px;
 }
- 
-footer {
+
+.verde {
     background-color: #28a745;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+footer {
+    background-color: #FFDF00;
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -191,135 +183,21 @@ footer a {
     color: #fff;
     text-decoration: none;
 }
-@media (max-width: 992px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .hero-text {
-        max-width: 100%;
-    }
-
-    .search-bar {
-        margin-top: 250px;
-        width: 90%;
-        position: relative;
-        margin: 0 auto;
-    }
-
-    .input-group input[type="text"],
-    .input-group input[type="date"] {
-        width: 100%;
-    }
-
-    .offers {
-        padding: 50px;
-    }
-}
-
-@media (max-width: 768px) {
-    header nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
+/* Media Queries */
+@media (max-width: 1024px) {
     .header-container {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 0 10px;
     }
 
-    .hero-text h2 {
-        font-size: 28px;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-    }
-
-    .promo {
-        flex-direction: column;
+    .header-container h1 {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
         align-items: center;
         text-align: center;
     }
 
-    .promo h2 {
-        font-size: 28px;
-    }
-
-    .promo p {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .header-container h1 {
-        font-size: 20px;
-    }
-
-    .hero-text h2 {
-        font-size: 24px;
-    }
-
-    .hero-text p {
-        font-size: 14px;
-    }
-
-    .search-bar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .input-group input[type="text"],
-    .input-group input[type="date"] {
-        width: 100%;
-    }
-
-    .offers {
-        padding: 20px;
-    }
-}
-
-
-
-/* Media Queries */
-@media (max-width: 1200px) {
-    .header-container {
-        padding: 0 20px;
-    }
-
-    .hero-text {
-        max-width: 600px;
-    }
-}
-
-@media (max-width: 992px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text {
-        max-width: 100%;
-    }
-
-    .search-bar {
-        margin-top: 30px;
-        width: 90%;
-    }
-}
-
-@media (max-width: 768px) {
-    header nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .hero-text h2 {
         font-size: 28px;
     }
@@ -328,84 +206,133 @@ footer a {
         font-size: 16px;
     }
 
-    .promo {
-        padding: 30px 20px;
-    }
-
     .promo h2 {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .promo p {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .hero-image img {
+        max-width: 300px;
     }
 }
 
-@media (max-width: 576px) {
-    .header-container h1 {
-        font-size: 20px;
-    }
-
-    .hero-text h2 {
-        font-size: 24px;
-    }
-
-    .hero-text p {
-        font-size: 14px;
-    }
-
-    .search-bar {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .input-group input[type="text"],
-    .input-group input[type="date"] {
-        width: 100%;
-    }
-
-    .offers {
-        padding: 20px;
-    }
-}
-/* Estilos gerais para o menu hamburguer */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-}
-
-.menu-toggle img {
-    width: 24px;
-    height: 24px;
-}
-
-/* Estilos para o menu de navegação */
-#main-nav {
-    display: flex;
-    gap: 15px;
-}
-
-/* Estilos para telas pequenas */
 @media (max-width: 768px) {
-    #main-nav {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav {
         display: none;
         flex-direction: column;
-        gap: 10px;
-        position: absolute;
-        top: 60px; /* Ajuste conforme a altura do seu header */
-        right: 0;
-        background: white;
-        border: 1px solid #ccc;
-        width: 200px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header nav.active {
+        display: flex;
     }
 
     .menu-toggle {
         display: block;
     }
 
-    .menu-toggle.active + #main-nav {
+    .hero-text h2 {
+        font-size: 24px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .search-bar {
+        margin-top: 140px;
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+        box-shadow: none;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar input[type="text"],
+    .search-bar input[type="date"] {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .search-bar button {
+        width: 80%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+
+    .promo img {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .card {
+        margin: 0;
+    }
+
+    .promo h2 {
+        font-size: 18px;
+    }
+
+    .promo p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0 5px;
+    }
+
+    .header-container h1 {
+        font-size: 18px;
+    }
+
+    .menu-toggle img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+    }
+
+    .hero-text p {
+        font-size: 12px;
+    }
+
+    .search-bar {
+        padding: 5px;
+        width: 100%;
+    }
+
+    .search-bar input[type="text"],
+    .search-bar input[type="date"] {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+
+    .promo h2 {
+        font-size: 16px;
+    }
+
+    .promo p {
+        font-size: 14px;
     }
 }
